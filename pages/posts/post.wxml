@@ -1,0 +1,61 @@
+<import src="post-item/post-item-template.wxml" />
+<view>
+  <swiper
+    catchtap='onSwiperTap'
+    class="seiperConatiner" 
+    indicator-dots="true"
+    autoplay="true"
+    interval="5000"
+  >
+    <swiper-item>
+      <image src="/images/post/xiaolong.jpg" class = "swiperImg" data-postId="3"></image>
+    </swiper-item>
+    <swiper-item>
+    <image src="/images/post/vr.png" class = "swiperImg" data-postId="4"></image></swiper-item>
+    <swiper-item>
+    <image src="/images/post/sls.jpg" class = "swiperImg" data-postId="5"></image></swiper-item>
+  </swiper>
+
+
+  <block wx:for="{{postList}}" wx:for-item="item" wx:key="{{item.postId}}" wx:for-index="idx">
+                               
+    <view catchtap='onPostTap' data-postId="{{item.postId}}">
+      <template is="postItem" data="{{...item}}" />
+    </view>
+    
+  </block>
+  <!-- <view class="post-container">
+    <view class="post-author">
+      <image class="authorImg" src="/images/avatar/1.png"></image>
+      <text class="authoDate">Nov 25 2018</text>
+    </view>
+    <view>
+      <text class="postTitle">正是大撒的撒大的啊的啊</text>
+      <image class="containerImg" src="/images/post/crab.png"></image>
+          <text class="postContent">圣诞节卡家大吉大利卡就到了卡就到了卡经典款垃圾堆里卡觉得克拉就哭了多久啊了肯德基啦;</text>
+    </view>
+    <view class="postLike">
+      <image class="postLikeImg" src="/images/icon/chat.png"></image>
+      <text class="postLikeFont">92</text>
+      <image class="postLikeImg" src="/images/icon/view.png"></image>
+      <text class="postLikeFont">65</text>
+    </view>
+
+     <view class="post-author">
+      <image class="authorImg" src="/images/avatar/2.png"></image>
+      <text class="authoDate">Nov 25 2018</text>
+    </view>
+    <view>
+      <text class="postTitle">贺卡快结婚登记卡上</text>
+      <image class="containerImg" src="/images/post/bl.png"></image>
+          <text class="postContent">圣诞节卡家大吉大利卡就到了卡就到了卡经典款垃圾堆里卡觉得克拉就哭了多久啊了肯德基啦;</text>
+    </view>
+    <view class="postLike">
+      <image class="postLikeImg" src="/images/icon/chat.png"></image>
+      <text class="postLikeFont">92</text>
+      <image class="postLikeImg" src="/images/icon/view.png"></image>
+      <text class="postLikeFont">65</text>
+    </view>
+
+  </view> -->
+</view>

@@ -1,0 +1,16 @@
+<!--pages/movies/moives.wxml-->
+<!-- <text>pages/movies/moives.wxml</text> -->
+<import src="movie-list/movie-list-template.wxml" />
+
+<view class="container">
+  <view class="movies-template">
+    <template is="movieListTemplate" data="{{...inTheaters}}" />
+  </view>
+
+  <view class="movies-template">
+    <template is="movieListTemplate" data="{{...comingSoon}}" />
+  </view>
+  <view class="movies-template">
+    <template is="movieListTemplate" data="{{...top250}}"/>
+  </view>
+</view>
